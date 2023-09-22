@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aset/css/style.css">
+    <title>Portfolio</title>
+</head>
+
+</html>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <div class="social-media">
+         
+        <a href="mailto:assa1928tz@gamil.com"><img src="aset/email.png" alt=""></a>
+        <a href="https://api.whatsapp.com/send?phone=+6283875560480&text=halo"><img src="aset/telephone.png" alt=""></a>
+        <a href="https://www.instagram.com/serbaonline30/"><img src="aset/instagram.png" alt=""></a>
+          
+
+
+        </div>
+    </header>
+   
+    <nav>
+        <ul>
+            
+            <li><a href="#" id="about-link">About</a></li>
+            <li><a href="#" id="experiences-link">Experiences</a></li>
+            <li><a href="#" id="education-link">Education</a></li>
+            <li><a href="#" id="skills-link">Skills</a></li>
+            <li><a href="#" id="interest-link">Interest</a></li>
+            <li><a href="#" id="award-link">Award</a></li>
+        </ul>
+    </nav>
+
+    
+
+    <main>
+        <div id="content">
+            <section id="aboutContent" style="display:none;">
+                <img id="profile-img" src="aset/profile.jpg" alt="My Profile Picture">
+                <div class="nama-aja">
+                    <h1>suparti</h1>
+                    <br/>
+                </div>
+                <h2>About Me</h2>
+                <p>saya adalah seorang ibu rumah tangga dan saat ini usia saya 43th.</p>
+                
+            </section>
+            <section id="experiencesContent" style="display:none;">
+                <h2>Experiences</h2>
+                <p>Bekerja di industri sepatu selama 12th.</p> 
+            </section>
+            <section id="educationContent" style="display:none;">
+                <h2>Education</h2>
+                <p>SMP</p>
+            </section>
+            <section id="skillsContent" style="display:none;">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Memasak</li>
+                    <li>Membersihkan rumah</li>
+                    <li>Berkebun</li>
+                </ul>
+            </section>
+            <section id="interestContent" style="display:none;">
+                <h2>Interest</h2>
+                <p>Hobi saya bermain voli.</p>
+            </section>
+            <section id="awardContent" style="display:none;">
+                <h2>Awards</h2>
+                <p>Best Karyawan pada tahun 2008.</p>
+            </section>
+        </div>
+    </main>
+
+
+    <script>
+       
+        const content = document.getElementById("content");
+        
+       
+        const aboutLink = document.getElementById("about-link");
+        const experiencesLink = document.getElementById("experiences-link");
+        const educationLink = document.getElementById("education-link");
+        const skillsLink = document.getElementById("skills-link");
+        const interestLink = document.getElementById("interest-link");
+        const awardLink = document.getElementById("award-link");
+        
+        
+        function changeContent(contentId) {
+            
+            const allContentSections = document.querySelectorAll("#content > section");
+            allContentSections.forEach(section => {
+                section.style.display = "none";
+            });
+
+           
+            const selectedContent = document.getElementById(contentId);
+            selectedContent.style.display = "block";
+        }
+        
+        
+        aboutLink.addEventListener("click", () => changeContent("aboutContent"));
+        experiencesLink.addEventListener("click", () => changeContent("experiencesContent"));
+        educationLink.addEventListener("click", () => changeContent("educationContent"));
+        skillsLink.addEventListener("click", () => changeContent("skillsContent"));
+        interestLink.addEventListener("click", () => changeContent("interestContent"));
+        awardLink.addEventListener("click", () => changeContent("awardContent"));
+        
+        
+        changeContent("aboutContent");
+    </script>
+</body>
+</html>
